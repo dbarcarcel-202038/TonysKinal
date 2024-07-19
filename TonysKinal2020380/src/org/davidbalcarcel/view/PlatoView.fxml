@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #BB5D5E;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="-7.0" prefHeight="750.0" prefWidth="391.0" style="-fx-background-color: #f4c272;">
+         <children>
+            <VBox layoutX="25.0" layoutY="46.0" prefHeight="656.0" prefWidth="326.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" prefHeight="174.0" prefWidth="325.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/addnewdocument_118445.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" prefHeight="155.0" prefWidth="326.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/delete_remove_bin_icon-icons.com_72400.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" mnemonicParsing="false" prefHeight="171.0" prefWidth="326.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Editar">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/353430-checkbox-edit-pen-pencil_107516.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" mnemonicParsing="false" prefHeight="157.0" prefWidth="326.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Reporte">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/3775748-check-date-list-planner-time_108972.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="52.0" fitWidth="74.0" layoutX="461.0" layoutY="687.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Tony.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="63.0" layoutX="1210.0" layoutY="681.0" onMouseClicked="#ventanaTipoPlato" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/pngwing.com%20(1).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblFecha" ellipsisString="" layoutX="1030.0" layoutY="-1.0" prefHeight="30.0" prefWidth="243.0" text="Fecha" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="417.0" layoutY="60.0" prefHeight="100.0" prefWidth="849.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="3.0" prefWidth="163.39999999999998" />
+            <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="NEVER" maxWidth="387.20000000000005" minWidth="10.0" prefWidth="220.80002441406248" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.9999877929687" minWidth="10.0" prefWidth="228.80000000000007" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="235.20000000000005" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="36.0" prefWidth="232.0" text="Código Plato" textFill="#572512">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoPlato" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label prefHeight="36.0" prefWidth="212.0" text=" Cantidad" textFill="#572512" GridPane.columnIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="Nombre Plato" textFill="#572512" GridPane.rowIndex="1">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombrePlato" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label prefHeight="36.0" prefWidth="212.0" text=" Descripción" textFill="#572512" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin>
+            </Label>
+            <ComboBox fx:id="cmbCodigoTipoPlato" prefHeight="25.0" prefWidth="206.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label prefHeight="36.0" prefWidth="232.0" text="Código Tipo Plato" textFill="#572512" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="36.0" prefWidth="232.0" text="Precio Plato" textFill="#572512" GridPane.rowIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDescripcionPlato" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txtPrecioPlato" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtCantidad" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblPlatos" layoutX="417.0" layoutY="215.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="344.0" prefWidth="827.0">
+         <columns>
+            <TableColumn fx:id="colCodigoPlato" prefWidth="93.5999755859375" text="Código Plato" />
+            <TableColumn fx:id="colCantidad" prefWidth="79.20001220703125" text="Cantidad" />
+            <TableColumn fx:id="colNombrePlato" prefWidth="152.79998779296875" text="Nombre Plato" />
+            <TableColumn fx:id="colDescripcionPlato" prefWidth="242.4000244140625" text="Descripción Plato" />
+            <TableColumn fx:id="colPrecioPlato" prefWidth="127.199951171875" text="Precio Plato" />
+            <TableColumn fx:id="colCodigoTipoPlato" prefWidth="136.800048828125" text="Código Tipo Plato" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
